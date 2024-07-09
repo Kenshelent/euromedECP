@@ -71,3 +71,57 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## API Endpoints
+
+### Users
+
+#### Create User
+
+- **URL:** `/users`
+- **Method:** `POST`
+- **Description:** Создает нового пользователя.
+- **Request Body:**
+  ```json
+  {
+    "surname": "string",
+    "firstName": "string",
+    "middleName": "string",
+    "result": "number"
+  }
+  ```
+- **Response:**
+  - **Status:** `201 Created`
+  - **Body:**
+    ```json
+    {
+      "id": "number",
+      "surname": "string",
+      "firstName": "string",
+      "middleName": "string",
+      "result": "number",
+      "date": "string"
+    }
+    ```
+
+#### Get All Users
+
+- **URL:** `/users`
+- **Method:** `GET`
+- **Description:** Возвращает список всех пользователей.
+- **Response:**
+  - **Status:** `200 OK`
+  - **Body:**
+    ```json
+    [
+      {
+        "id": "number",
+        "surname": "string",
+        "firstName": "string",
+        "middleName": "string",
+        "result": "number",
+        "date": "string"
+      },
+      ...
+    ]
+    ```
